@@ -1,5 +1,3 @@
-# modelos/auditoria.py
-
 from datetime import datetime
 from modelos.cambio import Cambio
 
@@ -7,9 +5,7 @@ from modelos.cambio import Cambio
 class Auditable:
 
     def __init__(self):
-
         self._historial: list[Cambio] = []
-
 
     def registrar_cambio(self,campo: str,valor_anterior,valor_nuevo):
 
@@ -25,9 +21,7 @@ class Auditable:
 
     @property
     def historial(self):
-
         return self._historial.copy()
-
 
     def mostrar_historial(self):
 
